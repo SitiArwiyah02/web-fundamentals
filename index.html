@@ -5,31 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Fundamentals | Siti Arwiyah</title>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Web Fundamentals</h1>
-    <p>Dokumentasi & Latihan Dasar Pemrograman Web</p>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-icon">💻</span>
+        <strong>Siti Arwiyah</strong> | Web Dev
+      </div>
+      <button id="themeToggle" class="btn-theme" title="Ganti Tema">
+        <span id="themeIcon">🌙</span> <span id="themeText">Dark Mode</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="badge">🚀 Mini Project #1</div>
+    <h1>Web Fundamentals & Interactive Hub</h1>
+    <p>Ruang eksplorasi dan latihan dasar pemrograman web: <strong>HTML5</strong>, <strong>CSS3</strong>, dan <strong>JavaScript Interaktif</strong>.</p>
   </header>
 
-  <main>
+  <main class="container">
+    <!-- Interactive Feature 1: Target Belajar (To-Do List) -->
     <section class="card">
-      <h2>🚀 Selamat Datang</h2>
-      <p>Repositori ini berisi kumpulan materi dasar dan latihan pemrograman web: HTML5, CSS3, dan JavaScript.</p>
+      <div class="card-header">
+        <h2>📝 Target Belajar Hari Ini</h2>
+        <span class="pill">JavaScript DOM & LocalStorage</span>
+      </div>
+      <p class="card-desc">Tambahkan topik atau latihan yang ingin Anda kuasai hari ini. Daftar akan otomatis tersimpan!</p>
+      
+      <form id="todoForm" class="todo-form">
+        <input type="text" id="todoInput" placeholder="Contoh: Belajar Flexbox & Grid..." required autocomplete="off">
+        <button type="submit" class="btn btn-primary">+ Tambah</button>
+      </form>
+
+      <ul id="todoList" class="todo-list">
+        <!-- Item akan dimuat dinamis oleh JavaScript -->
+      </ul>
     </section>
 
+    <!-- Interactive Feature 2: Mini Tools & Color Generator -->
+    <section class="grid-2">
+      <!-- Tool A: Click Counter -->
+      <div class="card">
+        <div class="card-header">
+          <h2>🔢 Click Counter</h2>
+        </div>
+        <p class="card-desc">Latihan manipulasi state dan event listener.</p>
+        <div class="counter-display" id="counterValue">0</div>
+        <div class="btn-group">
+          <button id="btnDecrement" class="btn btn-secondary">- Kurang</button>
+          <button id="btnReset" class="btn btn-outline">Reset</button>
+          <button id="btnIncrement" class="btn btn-primary">+ Tambah</button>
+        </div>
+      </div>
+
+      <!-- Tool B: Live Color Generator -->
+      <div class="card">
+        <div class="card-header">
+          <h2>🎨 Random Color Picker</h2>
+        </div>
+        <p class="card-desc">Menghasilkan warna acak dan mengubah styling secara real-time.</p>
+        <div class="color-preview" id="colorBox">
+          <span id="colorHex">#2563EB</span>
+        </div>
+        <button id="btnRandomColor" class="btn btn-primary btn-block">🎲 Acak Warna Baru</button>
+      </div>
+    </section>
+
+    <!-- Modul Pembelajaran -->
     <section class="card">
-      <h2>📚 Modul Pembelajaran</h2>
-      <ul class="module-list">
-        <li><strong>01 - HTML5:</strong> Struktur semantik, formulir, dan elemen multimedia.</li>
-        <li><strong>02 - CSS3:</strong> Styling, Flexbox, Grid, dan Responsive Web Design.</li>
-        <li><strong>03 - JavaScript:</strong> Variabel, fungsi, DOM manipulation, dan event handling.</li>
-      </ul>
+      <div class="card-header">
+        <h2>📚 Modul Pemrograman Web</h2>
+      </div>
+      <div class="modules-grid">
+        <div class="module-item html">
+          <h3>HTML5 Semantik</h3>
+          <p>Membangun kerangka website dengan tag standar yang ramah SEO dan mudah dibaca.</p>
+          <span class="tag">Kerangka</span>
+        </div>
+        <div class="module-item css">
+          <h3>CSS3 Modern</h3>
+          <p>Pewarnaan, layouting dengan Flexbox/Grid, animasi halus, dan responsif di smartphone.</p>
+          <span class="tag">Tampilan</span>
+        </div>
+        <div class="module-item js">
+          <h3>JavaScript Interaktif</h3>
+          <p>Menghidupkan website dengan manipulasi DOM, penanganan event, dan logika aplikasi.</p>
+          <span class="tag">Logika</span>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Siti Arwiyah. All rights reserved.</p>
+  <footer class="footer">
+    <p>&copy; 2026 <strong>Siti Arwiyah</strong>. Dibuat dengan cinta untuk pembelajaran web development.</p>
+    <p class="footer-sub"><a href="https://github.com/SitiArwiyah02/web-fundamentals" target="_blank">Lihat Kode Sumber di GitHub ↗</a></p>
   </footer>
 
   <script src="scripts/main.js"></script>
